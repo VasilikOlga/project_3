@@ -1,0 +1,454 @@
+// @import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.content
+		.free
+			.slider
+				padding: 20px 50px
+				.slick-next
+					right: 47%
+				.slick-prev
+					left: 47%
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.header
+	 	padding: 0 50px	
+	.fashion
+		.top
+			padding: 6px 50px
+		.main__fashion
+			padding: 45px 20px
+			.fashion__carnival
+				width: 435px
+				height: 395px
+	.content
+		padding: 0 50px
+		.free
+			.goods
+				padding: 0 15px
+				.woman
+					.shop
+						font-size: 12px
+						width: 90px
+						height: 30px
+				.man
+					.shop
+						font-size: 12px
+						width: 90px
+						height: 30px
+			.slider
+				.slick-slide
+					.slider__goods
+						width: 95%
+				.slick-next
+					right: 45%
+				.slick-prev
+					left: 45%
+		.news__sector
+			padding: 30px 50px 70px
+			margin: 0 -50px
+	.brands
+		padding: 45px 50px 30px
+	.footer
+		padding: 30px 50px 20px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.header
+		padding: 0 20px
+	.fashion
+		.top
+			padding: 6px 20px
+		.main__fashion
+			padding: 40px 15px
+			.fashion__carnival
+				width: 418px
+				height: 373px
+				h1
+					font-size: 70px
+				h2
+					font-size: 70px
+				h3
+					font-size: 31px
+	.content
+		padding: 0 20px
+		.free
+			.advantages
+				h4
+					font-size: 15px
+					margin-top: 12px
+					margin-bottom: 8px
+				&__p
+					font-size: 9px
+					margin-bottom: 38px
+			.goods
+				padding: 0 10px
+			.slider
+				padding: 10px 20px 20px
+				.slick-list
+					padding: 5px
+		.news__sector
+			padding: 25px 20px 70px
+			margin: 0 -20px
+		.products
+			margin-bottom: 57px
+			padding: 35px 20px
+	.brands
+		padding: 45px 20px 20px
+		&__contend
+			padding: 20px 3px 0
+	.area
+		margin: 20px 10px 0px
+		&__list
+			.area__img
+				width: 80%
+
+  	.footer
+  		padding: 30px 20px 15px
+	  	.middle__footer
+	  		margin-bottom: 7px
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width : 685px)
+	/**/
+	.header
+		padding: 0 5px
+		height: 33px
+		&__info
+			font-size: 10px
+	.fashion
+		.top
+			padding: 6px 5px
+			.head__fashion
+				.logo
+					font-size: 20px
+				.menu
+					margin-right: 4px
+					&__item
+						font-size: 10px
+		.main__fashion
+			padding: 109px 5px
+			display: flex
+			justify-content: center
+			.fashion__carnival
+				width: 407px
+				height: 373px
+	.content
+		padding: 0 7px
+		.free
+			.advantages
+				padding: 0 9px 0
+				h4
+					font-size: 13px
+					margin-top: 10px
+					margin-bottom: 6px
+				&__p
+					font-size: 8px
+					margin-bottom: 30px
+			.goods
+				flex-wrap: wrap
+				justify-content: center
+				.woman
+					width: 80%
+					margin-bottom: 10px
+				.man
+					width: 80%
+			.slider
+				.slick-list
+						padding: 5px 0
+				.slick-slide
+					.slider__goods
+						width: 95%
+				.slick-next
+					right: 43%
+				.slick-prev
+					left: 43%
+		.news__sector
+			margin: 0 -5px
+		.news__content
+			.innovation
+				flex-wrap: wrap
+				justify-content: center
+				&__item
+					width: 80%
+					text-align: center
+					margin-bottom: 15px
+	.brands
+		padding: 45px 30px 16px
+		&__contend
+			flex-wrap: wrap
+			flex-direction: column
+			justify-content: center
+			&>div
+				width: 95%
+				margin-bottom: 13px
+			.clother
+				margin-bottom: 17px
+				text-align: center
+				font-size: 17px
+				&__item
+					.clother__text
+						align-items: center
+						.shop
+							font-size: 10px
+		&__img
+			.block
+				height: 54%
+			.brands__img__text
+				padding: 44px
+				h4
+					font-size: 32px
+				h2
+					font-size: 56px
+	.brands__container
+		.trending
+			margin: 15px 0 30px
+			h4
+				font-size: 15px
+				margin-bottom: 7px
+			&__span
+				font-size: 11px
+				margin-bottom: 10px
+	.footer
+		padding: 25px 20px 12px
+		.top__footer
+			margin-bottom: 13px
+			justify-content: space-around
+			h6
+				font-size: 11px
+				margin-bottom: 10px
+			.account
+				display: none
+			.wear
+				display: none
+			.about
+				width: 44%
+				&__p
+					font-size: 10px
+			.soc__map
+				width: 44%
+				.soc__icon
+					.icons
+						.icon__item
+							.soc__link
+								font-size: 8px
+			.pay
+				&__span
+					font-size: 8px
+	  		
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.header
+		padding: 0 5px
+		&__info
+			text-align: center
+	.fashion
+		.top
+			.contact
+				justify-content: center
+				flex-wrap: wrap
+				font-size: 11px
+			
+				&__header
+					margin-bottom: 4px
+		.main__fashion
+			padding: 5px 5px 55px
+			.fashion__carnival
+				width: 267px
+				h1
+					font-size: 48px
+					margin-bottom: -11px
+				h2
+					font-size: 47px
+					margin-bottom: -5px
+				h3
+					font-size: 18px
+					letter-spacing: 24px
+				.collections
+					font-size: 10px
+				.shop
+					font-size: 15px
+					width: 111px
+					height: 33px
+		.menu 
+			display: none
+	.content
+		.free
+			.advantages
+				padding: 0 4px 0
+				h4
+					font-size: 12px
+					margin-top: 8px
+				&__p
+					margin-bottom: 23px
+				&__ship:before
+					font-size: 20px
+					padding: 10px
+				&__refound:before
+					font-size: 20px
+					padding: 10px
+				&__support:before
+					font-size: 20px
+					padding: 10px
+			.goods
+				.woman
+					padding: 7px 2px 7px
+					width: 92%
+					h3
+						font-size: 15px
+						margin-bottom: -3px
+					h4
+						font-size: 15px
+						margin-bottom: 8px
+					&__goods
+						font-size: 10px
+						margin-bottom: 5px
+				.man
+					padding: 7px 2px 7px
+					width: 92%
+					h3
+						font-size: 15px
+						margin-bottom: -3px
+					h4
+						font-size: 15px
+						margin-bottom: 8px
+					&__goods
+						font-size: 10px
+						margin-bottom: 5px
+			.slider
+				h5
+					font-size: 13px
+					margin-bottom: 2px
+				h6
+					font-size: 11px
+					margin-bottom: 7px
+				img
+					margin-bottom: 5px
+
+				.slick-next
+					right: 40%
+				.slick-prev
+					left: 40%
+			.feature__products
+				margin-bottom: 10px
+				.caption
+					h5
+						font-size: 16px
+						margin-bottom: 8px
+					&__products
+						font-size: 10px
+		.news__sector
+			padding: 20px 10px 40px
+			.news
+				&__tittle
+					margin-bottom: 15px
+					h5
+						font-size: 16px
+						margin-bottom: 3px
+					.tittle
+						font-size: 10px
+		.news__content
+			.innovation
+				&__item
+					.innovation__img
+						margin-bottom: 4px
+					h6
+						font-size: 11px
+						margin-bottom: 2px
+					.innovation__products
+						font-size: 9px
+						margin: 4px 0 10px
+					.icon__products
+						.shop
+							width: 85px
+							height: 30px
+		.products
+			margin-bottom: 40px
+			padding: 35px 3px
+	.brands
+		&__img
+			.brands__img__text
+				padding: 44px
+				h4
+					font-size: 27px
+				h2
+					font-size: 50px
+				h5
+					font-size: 27px
+				h3
+					font-size: 37px
+				h1
+					font-size: 52px
+	.brands__container
+		.trending
+			margin: 14px 0 20px
+			padding: 0 3px
+			h4
+				font-size: 13px
+			&__nav
+				.trending__input
+					width: 57%
+		.area
+			margin: 20px 3px 0
+	.footer
+		padding: 20px 7px 10px
+		.top__footer
+			.about
+				width: 47%
+			.soc__map
+				width: 43%
+		.middle__footer
+			.middle__list
+				.middle__item
+					margin-right: 9px
+					.middle__link
+						font-size: 11px
+		.last__footer
+			font-size: 6px
+				
+
+			
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
