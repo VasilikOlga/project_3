@@ -13,6 +13,10 @@
 					right: 47%
 				.slick-prev
 					left: 47%
+	.brands
+		&__img
+			.block
+				height: 66%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -130,12 +134,22 @@
 		.top
 			padding: 6px 10px
 			.head__fashion
+				flex-wrap: wrap
+				justify-content: center
 				.logo
-					font-size: 20px
-				.menu
-					margin-right: 4px
-					&__item
+					width: 100%
+					&__link
+						display: flex
+						justify-content: center
+					    margin-bottom: 6px
+				.menu__icon
+					width: 100%
+					a 
 						font-size: 10px
+					.dropdown__span:after 
+						top: 0px
+						right: -11px
+	
 		.main__fashion
 			padding: 109px 5px
 			display: flex
@@ -185,6 +199,9 @@
 					margin-bottom: 15px
 	.brands
 		padding: 45px 30px 16px
+		&__img
+			.block
+				margin-top: 1px
 		&__contend
 			flex-wrap: wrap
 			flex-direction: column
@@ -263,6 +280,21 @@
 			
 				&__header
 					margin-bottom: 4px
+			.head__fashion
+				.menu
+					.menu__item_1
+						display: none
+					.menu__item
+						width: 25%
+						border-radius: 3px 0 0 3px
+						a
+							border-radius: 3px 0 0 3px
+					.dropdown
+						width: 25%
+					.menu__item_5
+						width: 25%
+
+
 		.main__fashion
 			padding: 5px 5px 55px
 			.fashion__carnival
@@ -282,8 +314,6 @@
 					font-size: 15px
 					width: 111px
 					height: 33px
-		.menu 
-			display: none
 	.content
 		.free
 			.advantages
@@ -338,9 +368,9 @@
 					margin-bottom: 5px
 
 				.slick-next
-					right: 40%
+					right: 38%
 				.slick-prev
-					left: 40%
+					left: 38%
 			.feature__products
 				margin-bottom: 10px
 				.caption

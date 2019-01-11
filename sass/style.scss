@@ -50,17 +50,18 @@ a{
 }
 .shop{
   background-color: $color_1;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 900;
-  width: 140px;
-  height: 40px;
-  &__button{
-    color: #ffffff;
-  }
-  &__button:hover{
+  width: 152px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover{
     color: black;
   }
-
 }
 //---------------------------------------header----------------------------//
 .header{
@@ -140,40 +141,15 @@ a{
       justify-content: space-between;
       
       .logo{
-        font-weight: 900;
-        font-size: 25px;
+        width:  20%;
+        &__img{
+          width: 86px;
+          height: 60px;
+          border-radius: 50%;
+        }
       }
       .menu__icon{
-        display: flex;
-        justify-content: space-between;
-      }
-      .menu{
-        margin-right: 15px;
-        &__item{
-          display: inline-block;
-          font-weight: 700;
-          font-size: 13px;
-          margin-right: 4px;
-        }
-      }
-      .icon{
-        display: flex;
-
-        &__search:before{
-          font-family: $icon;
-          content: "\e909";
-          margin-right: 10px;
-        }
-        &__shop:after{
-          font-family: $icon;
-          content: "\e8cc";
-          margin-right: 10px;
-        }
-        &__format:after{
-          font-family: $icon;
-          content: "\e241";
-          margin-right: 10px;
-        }
+        width: 80%;
       }
     }
   }
@@ -215,117 +191,167 @@ a{
     }
   }
 }
-//-----------------------------------------sub-menu--------------------------------------//
-
-.open{
-  display: block;
-  margin-top: -10px;
-  cursor: pointer;
-  transition: opacity 0.2s linear;
-
-  &:hover{
-    opacity: 0.8;
-  }
-
-  span{
-    display: block;
-    height: 2px;
-    width: 25px;
-    border-radius: 40px;
-    background-color: black;
-    position: absolute;
-    overflow: hidden;
-    transition: all 0.4s ease;
-
-    &:nth-child(1){
-      z-index: 9;
-    }
-
-    &:nth-child(2){
-      margin-top: 4px;
-    }
-
-    &:nth-child(3){
-      margin-top: 8px;
-    }
-  }
-}
-
-.sub-menu{
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  height: 110px;
-  width: 110px;
-  right: 12px;
-  top: 0;
-  position: absolute;
-  background-color: rgba(38, 84, 133, 0.54);
-  border-radius: 50%;
-  z-index: 18;
-  overflow: hidden;
-
-  li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    &:first-child{
-      margin-top: 29px;
-      margin-left: 20px;
-    
-    }
-    &:nth-child(1){
-      -webkit-transition-delay: 0.05s;
-    }
-    &:nth-child(2){
-      -webkit-transition-delay: 0.10s;
-    }
-    &:nth-child(3){
-      -webkit-transition-delay: 0.15s;
-    }
-    &:nth-child(4){
-      -webkit-transition-delay: 0.20s;
-    }
-    &:nth-child(5){
-      -webkit-transition-delay: 0.25s;
-      margin-left: 9px;
-    }
-    a{
-      color: #fff;
-      font-size: 12px;
-      width: 100%;
-      display: block;
+//-----------------------------------------menu--------------------------------------//
+.menu {            
+  height: 35px;            
+  width: 100%;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {    
+      background: #333;
+      background-image: linear-gradient(bottom, #222222 0%, #555555 100%);
       float: left;
-      line-height: 20px;
+      position: relative;
+      width: 20%;
+      &:first-child a {
+        border-left: none;
+      }
+      &:last-child a {
+        border-right: none;   
+      }
+      &:hover > a {
+        background: #333;
+        border-left-color: #222;
+        color: #fff;
+        text-shadow: 0 1px 0 #000;
+        box-shadow: inset 0 0 10px #111;
+      }
+      &:first-child{
+        border-radius: 3px 0 0 3px;
+        a{
+          border-radius: 3px 0 0 3px; 
+        } 
+      } 
+      &:last-child{
+        border-radius: 0 3px 3px 0; 
+        a{
+          border-radius: 0 3px 3px 0; 
+        }
+      }
+    }
+  }
+  a {                
+    border-right: 1px solid #222;
+    border-left: 1px solid #555;
+    color: #ccc;
+    display: block;
+    font-size: 14px;
+    height: 35px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 -1px 0 #000;    
+    -webkit-box-shadow: inset 0 0 10px transparent;
+    -moz-box-shadow: inset 0 0 10px transparent;
+    &:after {
+      background: rgba(329, 160, 318, -0.93);
+      content: "";
+      height: 15px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+  span {
+    position: relative;    
+  }
+  a:active span {
+    color: #ffd;
+    position: relative;
+    top: 1px;
+  }
+  .dropdown{
+    &__span:after {
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 5px solid #ccc;
+      content: "";
+      right: -13px;
+      position: absolute;
+      top: 3px;
+    }
+    &__list{
+      opacity: 0;
+      position: absolute;
+      top: 35px;
+      visibility: hidden;
+      width: 0;
+      transition: all 300ms ease-out;
     }
   }
 }
 
-.oppenned{
-  .sub-menu{
-    opacity: 1;
-    height: 150px;
-    width: 150px;
-  }
-  span:nth-child(2){
-    overflow: visible;
-  }
-  span:nth-child(1), span:nth-child(3){
-    z-index: 100;
-    transform: rotate(45deg);
-  }
-  span:nth-child(1){
-    transform: rotate(-317deg) translateY(5px) translateX(4px);
-  }
-  span:nth-child(2){
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: rgba(38, 84, 133, 0.54);
-  }
-  span:nth-child(3){      
-    transform: rotate(-46deg) translateY(-1px) translateX(1px);
-  }
+
+.dropdown:hover > a span:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content: "";
+  right: -15px;
+  position: absolute;
+  top: 6px;
+}
+
+.menu ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+}
+
+.menu ul ul li {
+  background: #f3f3f3;
+  float: none;    
+  line-height: 0;
+  width: 100%;            
+}
+
+.menu ul ul li:nth-child(odd) {
+  background: #eee;    
+}
+
+.menu ul ul li:first-child, .menu ul ul li:first-child a { 
+  border-radius: 0; 
+}
+.menu ul ul li:last-child, .menu ul ul li:last-child a { 
+  border-radius: 0 0 3px 3px; 
+}
+
+.menu ul ul li a {
+  border-right: none;
+  border-left: none;
+  border-top: 1px solid #fff;
+  color: #555;
+  font-size: 12px;
+  height: 36px;
+  line-height: 36px;
+  text-align: left;
+  text-shadow: 0 -1px 0 #eee;
+}
+
+.menu ul li ul li a:after {
+  background: rgba(0,0,0,.02);
+  content: "";
+  height: 18px;
+  left: 0;
+  position: absolute;
+  top: 19px;
+  width: 100%;
+}
+
+.menu ul ul li a:hover {
+  background: #ffd;
+  color: #111;
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: none;
+}
+
+.menu ul ul a:active span {
+  color: #111;
+  position: relative;
+  top: 1px;
 }
 
 //----------------------------------------------------sector choise----------------------------//
@@ -429,8 +455,10 @@ a{
 
       .slick-prev{
         left: 45%;
-        top: 100%;
+        top: 102%;
         position: absolute;
+        width: 30px;
+        height: 30px;
 
         &:before{
           font-family: $icon;
@@ -439,13 +467,14 @@ a{
           background-color: $color_1;
           border-radius: 50%;
           font-size: 30px;
-          
         }
       }
       .slick-next{
-        top: 100%;
+        top: 102%;
         right: 50%;
         position: absolute;
+        width: 30px;
+        height: 30px;
 
         &:before{
           font-family: $icon;
@@ -462,11 +491,18 @@ a{
         justify-content: center;
         text-align: center;
         .slider__goods{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          .shop{
+            font-size: 14px;
+            font-weight: 600;
             width: 100%;
+            height: 25px;
+            border-radius: 20px;
+          }
         }
       }
       .slick-list{
@@ -499,12 +535,6 @@ a{
         .last{
           font-weight: 900;
         }
-      }
-      .shop{
-        font-size: 14px;
-        font-weight: 600;
-        width: 90px;
-        height: 25px;
       }
     }
   }
@@ -636,7 +666,7 @@ a{
     justify-content: center;
     .block{
       position: absolute;
-      height: 70%;
+      height: 95%;
       margin-top: 18px;
     }
       
