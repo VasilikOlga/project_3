@@ -36,7 +36,7 @@ a {
   .shop:hover {
     color: black; }
 
-.header {
+#header {
   background-image: url(../img/header.jpg);
   height: 40px;
   padding: 0 70px;
@@ -52,11 +52,11 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .header__info {
+  #header .header__info {
     font-weight: 700;
     font-size: 14px;
     color: #ffff; }
-  .header__close:before {
+  #header .header__close:before {
     font-family: "icomoon";
     content: "\e5cd";
     background-color: white;
@@ -699,7 +699,7 @@ a {
             justify-content: center; }
     .brands__img .block {
       position: absolute;
-      height: 70%;
+      height: 60%;
       margin-top: 18px; }
     .brands__img .brands__img__text {
       position: relative;
